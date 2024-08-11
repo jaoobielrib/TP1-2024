@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3</title>
+</head>
+<body>
+    <script>
+        function ad(a, b) {
+        return a+b
+        }
+            
+        function div(a, b) {
+            if (b != 0) {        
+                return a/b
+            } else {
+                return("Não é possível dividir um número por zero")
+            }
+        }
+
+        function mul(a, b) {
+        return a*b
+        }
+
+        function sub(a, b) {
+        return a-b
+        }
+
+        var a = prompt("Me dê um número")
+        a = parseInt(a)
+        var b = prompt("Agora outro")
+        b = parseInt(b)
+        var z = prompt("Digite adição, subtração, multiplicação ou divisão")
+            switch (z) {
+                    case "Adição": alert(ad(a,b))
+                        break;
+                    case "Subtração": alert(sub(a, b))
+                        break;
+                    case "Divisão": alert(div(a,b))
+                        break;
+                    case "Multiplicação": alert(mul(a,b))
+                        break;
+                    default: alert("Inválido") 
+            }
+    </script>
+</body>
+</html>

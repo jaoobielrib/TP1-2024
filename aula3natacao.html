@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3</title>
+</head>
+<body>
+    <script>
+            function cat(x) {
+                if (x >= 18) {
+                    return alert("Categoria Adulta")
+                }
+
+                else if (x > 13 && x < 18) {
+                    return alert("Categoria Juvenil B")
+                }
+
+                else if (x > 10 && x < 14) {
+                    return alert("Categoria Juvenil A")
+                }
+
+                else if (x > 7 && x < 11) {
+                    return alert("Categoria Infantil B")
+                }
+
+                else if (x > 4 && x < 8) {
+                    return alert("Categoria Infantil A")
+                }
+
+                else {
+                    alert("Inválido")
+                }
+            }
+
+            var x = prompt("Me diga uma idade ")
+            x = parseInt(x)
+            prompt(cat(x))
+
+
+    </script>
+</body>
+</html>
