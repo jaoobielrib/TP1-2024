@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+</head>
+<body>
+    <script>
+        var num = Math.random()*100
+        num = parseInt(num)
+        alert(num)
+        var sort = prompt("Acabei de sortear um número, e preciso que você o adivinhe")
+            while(sort != num) {
+                if (sort < num) {
+                    sort = prompt("O número sorteado é um pouco maior , tente novamente")
+                }
+
+                if (sort > num) {
+                    sort = prompt("O número sorteado é um pouco menor, tente novamente")
+                } 
+            } 
+            
+            if (sort = num) {
+                alert("Você acertou")
+            }
+    </script>
+</body>
+</html>
