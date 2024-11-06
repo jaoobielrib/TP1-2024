@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11</title>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <p>Informe a tarefa que você deseja cadastrar</p>
+    <input type="text" id="caixa">
+    <button onclick="incluir()">Incluir</button>
+    <ul id="ulista">Cadastro de tarefas</ul>
+    <script>
+        function incluir() {
+            let tarefa = document.getElementById("caixa").value
+            let lista = document.getElementById("ulista")
+            let elemento = document.createElement("li")
+            if (tarefa != '') {
+                elemento.textContent = tarefa
+                lista.appendChild(elemento)
+                caixa.value = ''
+            }
+        }
+    </script>
+</body>
+</html>
