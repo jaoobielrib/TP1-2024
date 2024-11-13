@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12</title>
+</head>
+<body>
+    <h1>Digite em cada caixa de texto um valor entre 0 à 9 ou A à F:</h1>
+
+    <p>
+        <input type="text" id="x">
+        <input type="text" id="y">
+        <input type="text" id="z">
+        <input type="text" id="a">
+        <input type="text" id="b">
+        <input type="text" id="c">
+        <button onclick="juntar()">Clique:</button>
+    </p>
+
+    <script>
+        function juntar() {
+            let x1 = document.getElementById("x").value
+            let x2 = document.getElementById("y").value
+            let x3 = document.getElementById("z").value
+            let x4 = document.getElementById("a").value
+            let x5 = document.getElementById("b").value
+            let x6 = document.getElementById("c").value
+            let hex = "#"+x1+x2+x3+x4+x5+x6
+            document.body.style.backgroundColor = hex
+        }
+
+        function limpar () {
+            x.value = ""
+            y.value = ""
+            z.value = ""
+            a.value = ""
+            b.value = ""
+            c.value = ""
+            document.body.style.backgroundColor = "white"
+        }
+    </script>
+
+    <p>
+        <button onclick="limpar()">Deseja limpar?</button>
+    </p>
+
+</body>
+</html>
