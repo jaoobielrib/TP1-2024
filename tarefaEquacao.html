@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa de casa</title>
+</head>
+<body>
+    <h1>Digite em cada caixa de texto um valor numérico que corresponderá à A, B e C.</h1>
+
+    <p>
+        <input type="text" id="a">
+        <input type="text" id="b">
+        <input type="text" id="c">
+        <button onclick="equacao()">Clique para realizar uma equação de segundo grau:</button>
+    </p>
+
+    <script>
+        function equacao() {
+            let x1 = document.getElementById("a").value
+            x1 = parseInt(x1)
+            let x2 = document.getElementById("b").value
+            x2 = parseInt(x2)
+            let x3 = document.getElementById("c").value
+            x3 = parseInt(x3)
+            let delta = x2*x2-(4*x1*x3)
+            if (delta > 0) {
+                let raiz = Math.sqrt(delta)
+                raiz = parseInt(raiz)
+                let final1 = (-x2+raiz)/2*x1
+                let final2 = (-x2-raiz)/2*x1
+                alert("Os valores digitados foram: " + x1 + ", " + x2 + ", " + x3 + ". A primeira raiz é igual à " + final1 + ", e a segunda é igual à " + final2)
+            } else {
+                alert("Como o delta é negativo, a equação não possui raízes reais")
+            }
+        }
+    </script>
+</body>
+</html>
+
