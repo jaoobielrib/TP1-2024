@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Reforço 09/12</title>
+</head>
+<body>
+    <script>
+        var matriz1 = []
+        var matriz2 = []
+        var quantp = 0
+        var quanti = 0
+        for (let i = 1; i < 11; i++) {
+            let num = prompt("Digite um valor numérico inteiro: ")
+        
+            if (num % 2 != 0) {
+                matriz1.push(num)
+                quanti++
+
+            } else {
+                matriz2.push(num)
+                quantp++
+            }
+        }
+        
+        alert("Os números ímpares foram " + quanti + ": " + matriz1 + "; enquanto os pares foram " + quantp + ": " + matriz2 + ".")
+    </script>
+</body>
+</html>
