@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 29/01</title>
+</head>
+
+<style>
+    h1 {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 40px;
+        background-color: black;
+        color: white;
+    }
+    
+    body {
+        background-color: black;
+        align-items: center;
+    }
+    
+    button {
+        font-size: 35px;
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        margin: 0 1%;
+        padding: 10px;
+    }
+    
+    
+    #img {
+        height: 400px;
+        width: 400px;
+        margin: 20px;
+    }
+    
+    .centro {
+        display: flex;
+        justify-content: center;
+    }
+
+    #esq {
+        display: flex;
+        justify-content: left;
+    }
+
+    #dir {
+        display: flex;
+        justify-content: right;
+    }
+    
+</style>
+
+<body id="body">
+    <h1 id="h1">VOTE NO CANDIDATO ABAIXO:</h1>
+
+    <p class="centro">
+        <img id="img" src="https://s2-oglobo.glbimg.com/J0Zx3cyg_ar56d2aMfvCDdVbzZI=/0x0:1777x1548/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/S/p/7gFutlTwA80WkmlAD7dw/39335682-23012003-divulgacao-presidencia-da-republica-ricardo-stuckert-pa-foto-oficial-do-1-.jpg"
+        alt="" class="center">
+
+        <img id="img" src="https://sites.usp.br/portalatinoamericano/wp-content/uploads/sites/922/2022/02/ROUSSEFF-DILMA.jpg"
+        alt="" class="center">
+
+        <img id="img" src="https://imagem.natelinha.uol.com.br/tudo-sobre/ciro-gomes_1551.jpeg"
+        alt="" class="center">
+    </p>
+
+    <p class="centro"> 
+        <button id="lula" onclick="lula()">Lula</button>
+
+        <button id="dilma" onclick="dilma()">Dilma</button>
+    
+        <button id="ciro" onclick="ciro()">Ciro</button>
+
+    </p>
+
+    <p id="esq">
+        <button id="res" onclick="res()">MOSTRAR RESULTADO</button>
+    </p>
+
+    <p id="dir">
+        <button id="rein" onclick="rein()">REINICIAR VOTAÇÃO</button>
+    </p>
+
+    <script>
+
+        var lulavoto = 0
+        var votodilma = 0 
+        var votociro = 0 
+
+        function lula() {
+            lulavoto++
+            alert("Você votou no Lula")
+        }
+
+        function dilma() {
+            votodilma++
+            alert("Você votou na Dilma")
+        }
+
+        function ciro() {
+            votociro++
+            alert("Você votou no Ciro")   
+        }
+
+        function res() {
+            let total = lulavoto + votodilma + votociro
+            let porcentLula = (lulavoto / total) * 100;
+            let porcentDilma = (votodilma / total) * 100;
+            let porcentCiro = (votociro / total) * 100;
+            alert("O total de votos foi " + total + " com o total de porcentagens do Lula sendo " + porcentLula + ", Dilma sendo " + porcentDilma + ", e Ciro sendo " + porcentCiro + ".")
+
+        }
+
+        function rein() {
+           lulavoto = 0
+           votodilma = 0
+           votociro = 0
+        }
+
+    </script>
+
+</body>
+
+</html>
