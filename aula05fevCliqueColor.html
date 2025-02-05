@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05/02</title>
+</head>
+<style>
+    .vermelho {
+        color: red;
+    }
+</style>
+<body>
+    <p id="textoAlternado">Clique para mudar a cor</p>
+    <script>
+        let clique = document.getElementById("textoAlternado")
+        clique.addEventListener("click", () => {
+            clique.classList.toggle("vermelho")
+        })
+    </script>
+</body>
+</html>
