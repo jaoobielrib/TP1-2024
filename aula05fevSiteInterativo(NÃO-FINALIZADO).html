@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05/02</title>
+</head>
+
+<style>
+    h1 {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 40px;
+    }
+
+    #style {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        font-size: 35px;
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        margin: 0 1%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    #mensagem {
+        text-align: center;
+    }
+
+    li {
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <h1>LISTA DE TAREFAS:</h1>
+    <ul id="tarefas"></ul>
+    <div id="style">
+        <button id="adicionarTarefa" onclick="adc()">Adicionar tarefa</button>
+        <button id="removerTarefa" onclick="rmv()">Remover última tarefa</button>
+    </div>
+    <p id="mensagem">Clique para adicionar ou remover tarefas</p>
+
+    <script>
+        let contagem = 0
+        function adc() {
+            contagem++
+                let li = document.createElement("li")
+                li.textContent = "Nova tarefa"
+                tarefas.appendChild(li)
+                console.log(contagem)
+                li.style.color = "green"
+        }
+
+        function rmv() {
+            li.style.color = "red"
+            let tar = document.getElementById("tarefas")
+            
+        }
+    </script>
+</body>
+</html>
