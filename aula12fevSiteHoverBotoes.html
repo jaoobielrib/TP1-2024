@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05/02</title>
+</head>
+<style>
+    body {
+        background-color: lightgoldenrodyellow;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .aa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .bb {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+
+    img {
+        height: 400px;
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #incluir {
+        font-size: 15px;
+        background-color: lightblue;
+        color: black;
+        border-radius: 30px;
+        padding: 10px;
+        display: block;
+        margin-left: 30px;
+        margin-right: auto;
+    }
+
+    #editar {
+        font-size: 15px;
+        background-color: lightblue;
+        color: black;
+        border-radius: 30px;
+        margin: 0 1%;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    .centro {
+        font-size: 15px;
+        background-color: lightblue;
+        color: black;
+        border-radius: 30px;
+        margin: 0 1%;
+        padding: 10px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    li {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1 id="nome">Eleanor Crain</h1>
+    <img src="https://i.pinimg.com/736x/b6/ee/54/b6ee542361557197710a0a1956ef4edf.jpg" alt="Nell" id="foto">
+    <p id="anivfev" class="aa">DATA DE ANIVERSÁRIO: 21 de fevereiro de 1986</p>
+    <p id="cidade" class="aa">CIDADE: California, EUA</p>
+    <P id="ps" class="aa">PASSATEMPOS:</P>
+    <ul id="tarefas">
+        <li class="bb">Ficar com a família;</li>
+        <li id="pq" class="bb">Morar em sua casa de infância;</li>
+    </ul>
+    <button id="incluir">INCLUIR PASSATEMPO</button>
+    <button id="editar" class="centro">EDITAR PASSATEMPO</button>
+    <button id="editarn" class="centro">EDITAR NOME</button>
+    <button id="editarf" class="centro">EDITAR FOTO</button>
+    <button id="editarc" class="centro">EDITAR CIDADE</button>
+    <button id="nasc" class="centro">EDITAR DATA DE NASCIMENTO</button>
+</body>
+
+<script>
+    let botaoinc = document.getElementById("incluir")
+    botaoinc.addEventListener("mouseover", () => {
+        botaoinc.style.backgroundColor = "pink"
+    })
+    botaoinc.addEventListener("mouseout", () => {
+        botaoinc.style.backgroundColor = "lightblue"
+    })
+    let botaoed = document.getElementById("editar")
+    botaoed.addEventListener("mouseover", () => {
+        botaoed.style.backgroundColor = "pink"
+    })
+    botaoed.addEventListener("mouseout", () => {
+        botaoed.style.backgroundColor = "lightblue"
+    })
+    let botaonm = document.getElementById("editarn")
+    botaonm.addEventListener("mouseover", () => {
+        botaonm.style.backgroundColor = "pink"
+    })
+    botaonm.addEventListener("mouseout", () => {
+        botaonm.style.backgroundColor = "lightblue"
+    })
+    let botaoft = document.getElementById("editarf")
+    botaoft.addEventListener("mouseover", () => {
+        botaoft.style.backgroundColor = "pink"
+    })
+    botaoft.addEventListener("mouseout", () => {
+        botaoft.style.backgroundColor = "lightblue"
+    })
+    let botaocdd = document.getElementById("editarc")
+    botaocdd.addEventListener("mouseover", () => {
+        botaocdd.style.backgroundColor = "pink"
+    })
+    botaocdd.addEventListener("mouseout", () => {
+        botaocdd.style.backgroundColor = "lightblue"
+    })
+    let botaon = document.getElementById("nasc")
+    botaon.addEventListener("mouseover", () => {
+        botaon.style.backgroundColor = "pink"
+    })
+    botaon.addEventListener("mouseout", () => {
+        botaon.style.backgroundColor = "lightblue"
+    })
+
+    let mudarNome = document.getElementById("editarn")
+    mudarNome.addEventListener("click", () => {
+        let respnome = prompt("Digite o nome que deseja")
+        let nome1 = document.getElementById("nome")
+        nome1.textContent = respnome
+    })
+
+    let mudarft = document.getElementById("editarf")
+    mudarft.addEventListener("click", () => {
+        let resft = prompt("Digite o link da imagem que deseja ver na página")
+        let foto1 = document.getElementById("foto")
+        foto1.src = resft
+    })
+
+    let mudarcid = document.getElementById("editarc")
+    mudarcid.addEventListener("click", () => {
+        let rescdd = prompt("Digite a cidade que deseja")
+        let cidade1 = document.getElementById("cidade")
+        cidade1.textContent = "CIDADE: " + rescdd
+    })
+
+    let mudaraniv = document.getElementById("nasc")
+    mudaraniv.addEventListener("click", () => {
+        let resanv = prompt("Digite a data de aniversário que deseja")
+        let dataniv = document.getElementById("anivfev")
+        dataniv.textContent = "DATA DE ANIVERSÁRIO: " + resanv
+    })
+
+    let mudarpas = document.getElementById("editar")
+    mudarpas.addEventListener("click", () => {
+        let perg = prompt("Digite o que quer que entre no lugar da última tarefa")
+        let incluir = document.getElementById("pq")
+        let aaaa = document.getElementById("tarefas")
+        let last = aaaa.lastElementChild
+        last.textContent = perg
+    })
+
+    let incpass = document.getElementById("incluir")
+    incpass.addEventListener("click", () => {
+        let perg2 = prompt("Digite a tarefa que deseja adicionar")
+        let ta = document.getElementById("tarefas")
+        let li = document.createElement("li")
+        li.textContent = perg2
+        ta.appendChild(li)
+    })
+
+
+</script>
+</html>
