@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05/02</title>
+</head>
+<body>
+    <h1>Cálculo do IMC</h1>
+    <input type="text" id="txtAltura" placeholder="Digite a altura">
+    <input type="text" id="txtPeso" placeholder="Digite o peso">
+    <input type="button" id="btnCalcular" value="Calcular">
+    <hr>
+    <div id="divIMC"></div>
+
+    <script>
+        let calcular = document.getElementById("btnCalcular")
+        calcular.addEventListener("click", () => {
+            let peso = Number (document.getElementById('txtPeso').value)
+            let altura = Number (document.getElementById("txtAltura").value)
+            let res = (peso/(altura*altura)).toFixed(2)
+            let div = document.getElementById("divIMC")
+            div.textContent = "O cálculo do IMC resultou em " + res
+        })
+    </script>
+</body>
+</html>
