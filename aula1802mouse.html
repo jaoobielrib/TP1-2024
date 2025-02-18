@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="João Gabriel" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18/02</title>
+</head>
+
+<style>
+
+    div#area1 {
+        background-color: #f04028;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    div#area2 {
+        background-color: #65a5fb;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <div id="area1">Clique em mim!</div>
+    <p></p>
+    <div id="area2">Passe o mouse!</div>
+
+    <script>
+        let div1 = document.getElementById("area1")
+        div1.addEventListener("mousedown", () => {
+            div1.style.backgroundColor = "#1ec5e5"
+            div1.textContent = "Solte-me!"
+        })
+        div1.addEventListener("mouseup", () => {
+            div1.textContent = "Obrigado"
+            div1.style.backgroundColor = "#f04028"
+        })
+
+        let div2 = document.getElementById("area2")
+        area2.addEventListener("mouseover", () => {
+            div2.textContent = "Obrigado"
+        })
+        area2.addEventListener("mouseout", () => {
+            div2.textContent = "Passe o mouse!"
+        })
+    </script>
+</body>
+</html>
